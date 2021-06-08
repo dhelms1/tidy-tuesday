@@ -1,0 +1,3 @@
+"0","ggplot(tv.data, aes(x=factor(month))) + geom_bar(fill= ""#3396FF"") + ylab('Month Occurance') + "
+"0","  xlab('Month') + ggtitle('Monthly Occurance Distribution') +"
+"0","  geom_text(aes(y=..count.. + 20, label=..count..), stat='count', size = 4)"

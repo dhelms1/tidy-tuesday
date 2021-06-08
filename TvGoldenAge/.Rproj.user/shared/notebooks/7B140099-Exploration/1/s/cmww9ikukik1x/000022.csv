@@ -1,0 +1,4 @@
+"0","av.plot <- ggplot(tv.data, aes(x=av_rating)) + geom_histogram(bins=40, fill=""#DA0A0A"") + xlab('Rating') + ylab('') + ggtitle('Average Rating')"
+"0","share.plot <- ggplot(tv.data, aes(x=share)) + geom_histogram(bins=40, fill=""#09C517"") + xlab('Share') + ylab('') + ggtitle('Share')"
+"0","season.plot <- ggplot(tv.data, aes(x=seasonNumber)) + geom_histogram(bins=40, fill=""#0A75DA"") + xlab('Seasons') + ylab('') + ggtitle('Number of Seasons')"
+"0","grid.arrange(av.plot, share.plot, season.plot, ncol=3)"

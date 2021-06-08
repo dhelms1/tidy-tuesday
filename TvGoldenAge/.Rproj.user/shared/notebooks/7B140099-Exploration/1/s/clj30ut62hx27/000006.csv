@@ -1,0 +1,8 @@
+"0","tv.data %>% select(title, year, share) %>% group_by(title) %>% "
+"0","  summarize(avg_sharing=mean(share), year=floor(median(year))) %>% slice_max(avg_sharing, n=20) %>% "
+"0","  mutate(title=paste(title,'(', year, ')')) %>%"
+"0","  {ggplot(., aes(x=fct_rev(factor(title, levels=title)), y=avg_sharing)) +"
+"0","      geom_col(fill=""#C50981"") + xlab('') + ylab('Average Sharing') +"
+"0","      ggtitle('Top 20 Shared Shows') +"
+"0","      geom_text(aes(label=sprintf(""%.2f"", avg_sharing), y=avg_sharing + 1.2), size=3, vjust=0.3) +"
+"0","      coord_flip()}"

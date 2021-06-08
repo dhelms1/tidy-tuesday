@@ -1,0 +1,8 @@
+"0","genres.types <- unique(unlist(strsplit(unlist(unique(tv.data$genres)), ',')))"
+"0","tv.data[genres.types] <- rep(NA, nrow(tv.data))"
+"0",""
+"0","for (idx in 1:nrow(tv.data)) {"
+"0","  tv.data[idx, genres.types] <- as.numeric(genres.types %in% unlist(strsplit(tv.data$genres[idx], ',')))"
+"0","}"
+"0",""
+"0","kable(t(tv.data[1,]), col='Observation #1')"

@@ -1,0 +1,6 @@
+"0","tv.data <- tv.data %>% mutate(year = year(date),"
+"0","                              month = month(date),"
+"0","                              day = day(date))"
+"0",""
+"0","tv.data <- tv.data[c(1,2,3,7,8,9,4,5,6)]"
+"0","kable(t(tv.data[1,]), col='Observation #1')"

@@ -1,0 +1,8 @@
+"0","tv.data %>% select(title, year, av_rating) %>% group_by(title) %>% "
+"0","  summarize(avg_rating=mean(av_rating), year=floor(median(year))) %>% slice_max(avg_rating, n=20) %>% "
+"0","  mutate(title=paste(title,'(', year, ')')) %>%"
+"0","  {ggplot(., aes(x=fct_rev(factor(title, levels=title)), y=avg_rating)) +"
+"0","      geom_col(fill=""#09C59D"") + xlab('') + ylab('Average Rating') +"
+"0","      ggtitle('Top 20 Shows Average Ratings') +"
+"0","      geom_text(aes(label=sprintf(""%.2f"", avg_rating), y=avg_rating + 0.3), size=3, vjust=0.3) +"
+"0","      coord_flip()}"
